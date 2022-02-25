@@ -1,0 +1,9 @@
+FROM openjdk:11
+ 
+RUN -p MKDIR /usr/src/myapp
+WORKDIR /usr/src/myapp
+
+COPY . /usr/src/myapp
+
+RUN javac Main.java
+CMD ["java", "Main"]
